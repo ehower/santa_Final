@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<!--<script src="KidGenerator.js" charset="utf-8"></script>!-->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			<link rel="stylesheet" href="../css/master.css">
+			<script>
+				var counter = 0;
+				var counter1 = 0;
+				function generateName(){
+					var content = "<table>";
+					while (counter < 10000) {
+						var i = 0;
+						var container = document.getElementById("container");
+						var firstName = ["Emma","Olivia","Ava","Isabella","Sophia","Charlotte","Mia","Amelia","Harper","Evelyn","Liam","Noah","William","James","Oliver","Benjamin","Elijah","Lucas","Mason","Logan","Jackson","Noah","Caden","Grayson","Carter","Mateo","Ethan","Sebastian","Jayden","Camilla","Eliana","Zoe","Mila","Luna","Ella","Leah","Everly","Emily","Maya","Madison","Wyatt","Luke","Owen","Levi","Ryan","Benson","Evan","Ethan"];
+						var lastName = ["Smith","Johnson","Hall","Allen","Sanchez","Stewart","Price","Bennett","Williams","Jones","Brown","Young","Hernandez","King","Wright","Morris","Rogers","Reed","Cook","Wood","Barnes","Ross","Henderson","Miller","Wilson","Moore","Taylor","Lopez","Hill","Scott","Green","Morgan","Bell","Murphy","Bailey","Coleman","Jenkins","Perry","Powell","Anderson","Thomas","Jackson","White","Adams","Baker","Gonzalez","Nelson","Rivera","Beck","Stodard","Hower"];
+						var first = Math.floor(Math.random() * (firstName.length));
+						console.log(first);
+						var last = Math.floor(Math.random() * (lastName.length));
+						console.log(last);
+						var kid = firstName[first] + " " + lastName[last];
+						console.log(kid);
+
+						content += "<tr><td>" + kid + "</td>";
+						counter++;
+
+
+						var norn = "null";
+						var num = Math.floor((Math.random() * 2) + 1);
+						if(num == 1){
+							norn = "Nice";
+						}
+						else{
+							norn = "Naughty";
+						}
+						console.log(norn);
+
+						content += "<td>" + norn + "</td></tr>";
+						counter1++;
+					}
+					content += "</table>";
+					$('.tb').append(content);
+				}
+				function naughtyOrNice(){
+					var content = "<table>";
+					while (counter1 < 10) {
+						var i = 0;
+						var container = document.getElementById("container");
+						var norn = "null";
+						var num = Math.floor((Math.random() * 2) + 1);
+						if(num == 1){
+							norn = "Nice";
+						}
+						else{
+							norn = "Naughty";
+						}
+						console.log(norn);
+
+						content += "<tr><td>" + norn + "</td></tr>";
+						counter1++;
+					}
+					content += "</table>";
+					$('.tb').append(content);
+				}
+			</script>
+			<title>Naughty nice list</title>
+		</head>
+		<body onload = "generateName(); naughtyOrNice();">
+			</br></br>
+			<h1>Naughty Nice</h1>
+			<div class="tb">
+
+			</div>
+		</body>
+</html>
