@@ -77,3 +77,6 @@ main {
 	 margin-right:auto;
 	 padding: 50px;
   }
+.verticalFlex{
+	flex-direction: row;	
+}
