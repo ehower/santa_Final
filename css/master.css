@@ -1,0 +1,72 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+  background: #D83C20;
+  color: white;
+  font-size: 30px;
+  background-image: url("../Images/snowflake-red2.jpg");
+  background-repeat: repeat-x;
+  width: 100%;
+  font-family: "Copperplate Gothic Light";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(34,139,34,.3);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  height: 100vh;
+}
+  .nav_link {
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    width: 15em;
+    height: 75px;
+
+    background-color: #D83C20;
+    text-align: center;
+
+    transition: background-color .5s;
+    border-radius: 5px;
+  }
+    .nav_link a {
+      display: inline-block;
+      width: 15em;
+      height: 75px;
+
+      text-decoration: none;
+      color: #FFFFFF;
+    }
+    .nav_link:hover {
+      background-color: #D57D6D;
+    }
+    .clock {
+      background-color: #8C2715;
+      border: 5px solid #D83C20;
+
+      padding: 15px;
+      border-radius: 100%;
+      color: #FFFFFF;
+    }
+  @media only screen and (max-width: 600px) {
+    main {
+      flex-direction: column;
+    }
+      .nav_link {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+  }
