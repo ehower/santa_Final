@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="css/master.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="dash">
+        <div class="vel">
+          <h1>0</h1><p style="display: inline">km/h</p>
+          <h3>North</h3>
+        </div>
+        <div class="dest">
+          <h2 class="nextDest">Next Destination: 100 Notareal Rd.</h2>
+          <button onclick="nextDest()">→</button>
+        </div>
+        <div class="info">
+          <h2>Current Load: 0 kg</h2>
+          <h2>Presents Remaining: 0</h2>
+        </div>
+      </div>
+
+      <script type="text/javascript">
+        var x = 100;
+        function nextDest() {
+          x++;
+          $(".nextDest").text("Next Destination: " + x + " Notareal Rd.");
+        }
+      </script>
+    </main>
+  </body>
+</html>
