@@ -3,13 +3,13 @@
 		<head>
 			<!--<script src="KidGenerator.js" charset="utf-8"></script>!-->
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-			<link rel="stylesheet" href="../css/master.css">
+
 			<script>
 				var counter = 0;
 				var counter1 = 0;
 				function generateName(){
 					var content = "<table>";
-					while (counter < 10000) {
+					while (counter < 100) {
 						var i = 0;
 						var container = document.getElementById("container");
 						var firstName = ["Emma","Olivia","Ava","Isabella","Sophia","Charlotte","Mia","Amelia","Harper","Evelyn","Liam","Noah","William","James","Oliver","Benjamin","Elijah","Lucas","Mason","Logan","Jackson","Noah","Caden","Grayson","Carter","Mateo","Ethan","Sebastian","Jayden","Camilla","Eliana","Zoe","Mila","Luna","Ella","Leah","Everly","Emily","Maya","Madison","Wyatt","Luke","Owen","Levi","Ryan","Benson","Evan","Ethan"];
@@ -21,7 +21,7 @@
 						var kid = firstName[first] + " " + lastName[last];
 						console.log(kid);
 
-						content += "<tr><td>" + kid + "</td>";
+						content += "<tr class='row'><td class='con'>" + kid + "</td>";
 						counter++;
 
 
@@ -35,7 +35,7 @@
 						}
 						console.log(norn);
 
-						content += "<td>" + norn + "</td></tr>";
+						content += "<td class='con'>" + norn + "</td></tr>";
 						counter1++;
 					}
 					content += "</table>";
@@ -56,20 +56,38 @@
 						}
 						console.log(norn);
 
-						content += "<tr><td>" + norn + "</td></tr>";
+						content += "<tr class='row'><td class='con'>" + norn + "</td></tr>";
 						counter1++;
 					}
 					content += "</table>";
 					$('.tb').append(content);
 				}
 			</script>
+			<link rel="stylesheet" href="../css/master.css">
 			<title>Naughty nice list</title>
 		</head>
-		<body onload = "generateName(); naughtyOrNice();">
+		<body onload = "generateName(); naughtyOrNice(); afterCss();">
 			</br></br>
 			<h1>Naughty Nice</h1>
 			<div class="tb">
 
 			</div>
+
+			<script type="text/javascript">
+				function afterCss() {
+					$('.con').css('background-color', '#D6D6D6');
+					$('.con').css('font-size', '200%');
+					$('.row').css('text-align', 'center');
+					$('.tb').css('width', '1100px');
+					$('.row').css('width', '1100px');
+					$('.tb').css('text-align', 'center');
+					$('.con').css('width', '500px');
+					$('.con').css('width', '500px');
+					$('.row').css('background-color', '#D83C20');
+					$('.tb').css('margin-left', 'auto');
+					$('.tb').css('margin-right', 'auto');
+					console.log("help");
+				}
+			</script>
 		</body>
 </html>
